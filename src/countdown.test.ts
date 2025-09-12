@@ -20,7 +20,7 @@ const letsCountdown = (letters: string) => {
     const outputWordArray = word.split('')
 
     for (const letter of outputWordArray) {
-      // check if letter from the word is present in input string
+      // check if letter from the output word is present in input string
       const inputLetterIsPresent = inputLettersArray.includes(letter)
 
       if (inputLetterIsPresent) {
