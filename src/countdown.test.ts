@@ -24,7 +24,7 @@ const letsCountdown = (letters: string) => {
       const inputLetterIsPresent = inputLettersArray.includes(letter)
 
       if (inputLetterIsPresent) {
-        // get index of letter in input string
+        // if letter is present get index of letter in input string
         const inputIndex = inputLettersArray.findIndex((inputLetter) => {
           return inputLetter === letter
         })
