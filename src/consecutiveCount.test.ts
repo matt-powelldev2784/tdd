@@ -43,14 +43,14 @@ const getConsecutiveItems = ({ items, key }: GetConsecutiveItemsProps) => {
     const nextIndexRequiresSplit = itemIndex !== nextIndex - 1
     currentGroupedItems.push(itemIndex)
 
-    // push the current group of consecutive numbers results
+    // push the current group of consecutive numbers
     if (nextIndexRequiresSplit) {
       groupedItems.push(currentGroupedItems)
       currentGroupedItems = []
     }
   })
 
-  // find the longest array of consecutive numbers
+  // find the longest group of consecutive numbers
   const largestConsecutiveGroup = groupedItems.reduce((acc, groupedItems) => {
     return acc > groupedItems.length ? acc : groupedItems.length
   }, 0)
